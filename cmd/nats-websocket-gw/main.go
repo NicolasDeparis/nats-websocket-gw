@@ -15,6 +15,12 @@ func usage() {
 }
 
 func main() {
+	
+	fmt.Println("Entering Main"),
+
+	fmt.Println("Connect to :", os.Getenv("NATS_SERVER_URL")),
+
+	
 	settings := gw.Settings{
 		NatsAddr: os.Getenv("NATS_SERVER_URL"),
 	}
@@ -29,7 +35,6 @@ func main() {
 				ReadBufferSize:  1024,
 				WriteBufferSize: 1024,
 				CheckOrigin:     func(r *http.Request) bool { return true },
-			fmt.Println("Connect to :", os.Getenv("NATS_SERVER_URL")),
 			}
 		case "--trace":
 			settings.Trace = true
