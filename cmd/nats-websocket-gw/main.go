@@ -16,15 +16,15 @@ func usage() {
 
 func main() {
 	
-	fmt.Println("Entering Main"),
-
-	fmt.Println("Connect to :", os.Getenv("NATS_SERVER_URL")),
-
-	
 	settings := gw.Settings{
 		NatsAddr: os.Getenv("NATS_SERVER_URL"),
 	}
 
+	
+	fmt.Println("Entering Main")
+	fmt.Println("Connect to :", os.Getenv("NATS_SERVER_URL"))
+
+	
 	for _, arg := range os.Args[1:] {
 		switch arg {
 		case "--help":
