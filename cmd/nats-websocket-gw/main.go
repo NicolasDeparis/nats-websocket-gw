@@ -50,5 +50,5 @@ func main() {
 
 	gateway := gw.NewGateway(settings)
 	http.HandleFunc("/nats", gateway.Handler)
-	http.ListenAndServe("0.0.0.0:8910", nil)
+	http.ListenAndServe("127.0.0.1:8910", nil)
 }
