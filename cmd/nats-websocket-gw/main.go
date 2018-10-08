@@ -24,7 +24,7 @@ func main() {
 	
 
 	
-	fmt.Println("Entering Main")
+	fmt.Println("Entering Main, testtest")
 	fmt.Println("Connect to :", os.Getenv("NATS_SERVER_URL"))
 
 	
