@@ -18,7 +18,7 @@ func main() {
 	
 	settings := gw.Settings{
 		// NatsAddr: os.Getenv("NATS_SERVER_URL"),
-		NatsAddr: "127.0.0.1:4222",
+		NatsAddr: "localhost:4222",
 
 	}
 	
