@@ -17,7 +17,6 @@ func usage() {
 func main() {
 	
 	settings := gw.Settings{
-		// NatsAddr: os.Getenv("NATS_SERVER_URL"),
 		NatsAddr: "localhost:4222",
 
 	}
@@ -25,8 +24,8 @@ func main() {
 
 	
 	fmt.Println("Entering Main, testtest")
-	fmt.Println("Connect to :", os.Getenv("NATS_SERVER_URL"))
-
+	//fmt.Println("Connect to :", os.Getenv("NATS_SERVER_URL"))
+	fmt.Println("Connect to :", settings.NatsAddr)
 	
 	for _, arg := range os.Args[1:] {
 		switch arg {
